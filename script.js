@@ -1,7 +1,7 @@
-// Animate a number from 0 to endValue over the given duration
+
 function animateCountUp(element, endValue, duration = 1000) {
     let startValue = 0;
-    const increment = endValue / (duration / 16); // ~60fps
+    const increment = endValue / (duration / 16);
   
     function update() {
       startValue += increment;
@@ -16,7 +16,6 @@ function animateCountUp(element, endValue, duration = 1000) {
     requestAnimationFrame(update);
   }
   
-  // Load and process the JSON data
   fetch('./data.json')
     .then(response => response.json())
     .then(data => {
@@ -39,12 +38,11 @@ function animateCountUp(element, endValue, duration = 1000) {
   
         statsContainer.appendChild(stat);
   
-        // Animate the score count up
         const scoreEl = stat.querySelector('.animated-score');
         animateCountUp(scoreEl, item.score, 1000);
       });
   
-      // Animate the average score inside the circle
+
       const average = Math.round(total / data.length);
       const scoreDisplay = document.querySelector('.score');
       animateCountUp(scoreDisplay, average, 1000);
