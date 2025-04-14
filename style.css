@@ -58,7 +58,7 @@ body{
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: flex-start; /* <--- this is what pushes the content down */
+      justify-content: flex-start;
     }
   
     .container .left-side {
